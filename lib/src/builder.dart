@@ -31,7 +31,7 @@ extension BuilderExtension on Builder {
     String? correctionMessage,
     List<DiagnosticMessage> contextMessages = const [],
   }) {
-    if (condition.call()) {
+    if (!condition.call()) {
       throw DiagnosticException(
         Diagnostic(
           DiagnosticMessage(message, target: target),
